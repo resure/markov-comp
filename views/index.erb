@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Нормальные алгоритмы Маркова — произведение</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        font-weight: normal;
+        text-align: center;
+      }
+      #content {
+        width: 600px;
+        margin: 20px auto 20px auto;
+      }
+      #footer {
+        color: #aaa;
+        text-align: right;
+      }
+      #result {
+        font-size: 120%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content">
+      <h1>Произведение двух чисел</h1>
+      <form method="post" action="/">
+        Введите выражение:
+        <input name="input" <%= "value='#{params[:input]}'" if params[:input] %> />
+        <input type="submit" />
+      </form>
+      <br>
+      <% if @result %>
+        Результат:
+        <pre id="result"><%= @result %></pre>
+      <% end %>
+    </div>
+
+    <div id="footer">
+      <a href="bmstu.me">AK5-0x7da</a>
+    </div>
+  </body>
+</html>
